@@ -13,9 +13,9 @@ jobs:
     if: github.event_name == 'schedule' || github.event_name == 'watch' && github.event.repository.owner.id == github.event.sender.id
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@main
     - name: 初始化Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@main
       with:
         python-version: 3.7
     - name: 安装依赖包
